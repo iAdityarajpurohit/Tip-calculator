@@ -72,10 +72,11 @@
        let people = document.getElementById("people");
      let tip = document.getElementById("tip");
      let perMember = document.getElementById("perMember");
-     
+     let custom = document.getElementById("custom").value;
+      
      let btn = document.querySelectorAll(".btn")
    
-     var string=" ";
+     var string= 0;
       for(let i=0; i<btn.length; i++){
           btn[i].addEventListener("click",()=>{
             string =  btn[i].id;
@@ -84,6 +85,9 @@
     const tipCalcy = ()=> {
         var bill = document.getElementById("bill").value;
         var people = document.getElementById("people").value;
+        if(string == 0){
+        string = cusom
+        }
         let total = bill/string;
         
         let perPerson = total/people
@@ -91,7 +95,10 @@
         // console.log(total + " total and per member contry"+ perPerson );
     
         tip.innerHTML = total;
-        perMember.innerHTML = perPerson;   
+        perMember.innerHTML = perPerson;  
+        string=0;
+        custom=0;
+        
     }
 
     // let reset = document.getElementsByClassName("reset");
