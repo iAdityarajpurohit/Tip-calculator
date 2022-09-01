@@ -69,47 +69,57 @@
         </main>
     </div>
   <script>
-       let people = document.getElementById("people");
-     let tip = document.getElementById("tip");
-     let perMember = document.getElementById("perMember");
-     let custom = document.getElementById("custom").value;
-      
-     let btn = document.querySelectorAll(".btn")
-   
-     var string= 0;
-      for(let i=0; i<btn.length; i++){
-          btn[i].addEventListener("click",()=>{
-            string =  btn[i].id;
-          })
-      }
-    const tipCalcy = ()=> {
-        var bill = document.getElementById("bill").value;
-        var people = document.getElementById("people").value;
-        if(string == 0){
-        string = cusom
-        }
-        let total = bill/string;
-        
-        let perPerson = total/people
-        
-        // console.log(total + " total and per member contry"+ perPerson );
-    
-        tip.innerHTML = total;
-        perMember.innerHTML = perPerson;  
-        string=0;
-        custom=0;
-        
-    }
+  let people = document.getElementById("people");
+let tip = document.getElementById("tip");
+let perMember = document.getElementById("perMember");
 
-    // let reset = document.getElementsByClassName("reset");
-    let reset = document.getElementById("reset");
+let btn = document.querySelectorAll(".btn")
 
-
-    reset.addEventListener('click',()=>{
-        tip.innerHTML = 0.00;
-        perMember.innerHTML = 0.00;  
+var string=0;
+for(let i=0; i<btn.length; i++){
+    btn[i].addEventListener("click",()=>{
+        string =  btn[i].id;
     })
-  
+}
+
+const tipCalcy = ()=> {
+    let custom = document.getElementById("custom").value;
+    console.log(custom + " string is ");
+   var bill = document.getElementById("bill").value;
+   var people = document.getElementById("people").value;
+   if(string == 0){
+        // console.log(custom + ' value check');
+        string = custom;
+        var total = (bill*string)/100;
+        console.log(total);
+        var perPerson = total/people
+
+   }
+   else{
+       var total = bill/string;
+       var perPerson = total/people
+    }
+   
+   // console.log(total + " total and per member contry"+ perPerson );
+
+   tip.innerHTML = total;
+   perMember.innerHTML = perPerson;  
+   total=0;
+    string = 0;
+    custom=0;
+}
+
+// let reset = document.getElementsByClassName("reset");
+let reset = document.getElementById("reset");
+
+
+reset.addEventListener('click',()=>{
+   tip.innerHTML = 0.00;
+   perMember.innerHTML = 0.00;  
+   string = 0;
+    custom=0;
+})
+
   </script>
 </body>
 </html>
