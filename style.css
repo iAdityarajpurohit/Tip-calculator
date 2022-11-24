@@ -54,7 +54,7 @@ body {
     --font-size: 1.5rem;
 }
 .results-container {
-    width: 12vw;
+    width: 22vw;
     background: var(--very-dark-cyan);
     border-radius: 2rem;
     padding: 2rem 1rem 1rem;
@@ -63,7 +63,7 @@ body {
     gap: 1rem;
 }
 .results-container2 {
-    width: 12vw;
+    width: 15vw;
     height: 32vh;
     /* background: var(--very-dark-cyan); */
     background-color: #add2d8;
