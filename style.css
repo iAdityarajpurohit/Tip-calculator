@@ -53,6 +53,10 @@ body {
     --white: hsla(293, 20%, 17%, 0.749);
     --font-size: 1.5rem;
 }
+.result-cont{
+     display: flex;
+     justify-content:space-around
+}
 .results-container {
     width: 22vw;
     background: var(--very-dark-cyan);
@@ -63,8 +67,9 @@ body {
     gap: 1rem;
 }
 .results-container2 {
+    margin: 10px;
     width: 15vw;
-    height: 32vh;
+    height: 35vh;
     /* background: var(--very-dark-cyan); */
     background-color: #add2d8;
     border-radius: 2rem;
@@ -162,4 +167,25 @@ label {
     display: flex;
     width: min(96%, 60rem);
     gap: 2rem;
+}
+
+/* ========================= */
+
+@media(max-width: 750px){
+    
+    .result-cont{
+        margin: 10px;
+    }
+    
+    .results-container{
+        width: 100%;
+        margin: 5%;
+    }
+    .results-container2{
+        width: 100%;
+        
+    }
+    .container{
+        display: block;
+    }
 }
